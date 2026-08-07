@@ -161,6 +161,18 @@ LANDING
   max-width: 1200px;
 }
 
+.nav__container.background-image {
+  background-image: url("assets/movie-theater.avif");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-content: center;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100px;
+}
+
 
 .nav__link {
   position: relative;
@@ -229,31 +241,27 @@ header {
   align-items: center;
 }
 
+
 figure.header__img--wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
   gap: 16px;
   width: 100%;
-  max-width: 100%;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease-in-out;
-  margin: 0px;
-  padding: 0;
-  
-  
-
-
- 
- /* Added this after the tutorial to 
-  show it over the wave on larger screens */
+  margin: 0;
+  padding: 0 24px;
   z-index: 50;
 }
 
-
-figure.header__img--wrapper img:hover {
-  transform: scale(1.05);
+figure.header__img--wrapper img {
+  width: 100%;
+  height: 300px;         
+  object-fit: cover;        
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease-in-out;
 }
+
+
 figure.header__img--wrapper img:hover {
   transform: scale(1.05);
 }
