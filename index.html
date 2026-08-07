@@ -13,10 +13,10 @@
   <section id="landing">
     <nav>
       <div class="nav__container">
-        <img class="background-image"src="assets/movie-theater.avif" alt="">
+        <img class="background-image"src="assets/movie-reel.jpg" alt="">
         <ul class="nav__links">
-          <li><a href="#" class="nav__link">Home</a></li>
-          <li><a href="#" class="nav__link">Find your movie</a></li>
+          <li><a href="#" class="nav__link"><span style="color: red;">Home</span></a></li>
+          <li><a href="#" class="nav__link"><span style="color: white;">Find your movie</span></a></li>
           <li><a href="#" class="nav__link nav__link btn-contact">Contact</a></li>
         </ul>
         <button class="btn__menu" onclick="openMenu()">
@@ -41,27 +41,80 @@
       </div>
     </nav>
     <header>
+  </section>      
       <div class="header__container">
         <div class="header__description">
           <h1>The best movie library in America</h1>
-                <a href="#features"></a>
-        </div>
+          <p>Browse through our collection and discover new favorites.</p>
+        </div>   
         <div class="input__wrapper">
          <input type="text" placeholder="Search for a movie..." class="input__search">
          <button class="btn__search">
           <i class="fas fa-search"></i>
          </button>
         </div>
-        <figure class="header__img--wrapper">
-          <img src="assets/The Terminator.jpg" alt="">
-          <img src="assets/Terminator-2.jpg" alt="">
-          <img src="assets/Terminator-3.jpg" alt="">
-          <img src="assets/Terminator-Genisys.jpg" alt="">
-          <img src="assets/Terminator-Salvation.jpg" alt="">
-          <img src="assets/The Terminator-Sarah Connor Chronicles.jpg" alt="">
-        </figure>
+  <section id="features">
+    <div class="features__container">
+      <div class="row">
+        <h2 class="section__title">
+          <span style="color: red;">Featured</span> Movies
+        </h2>
+        <div class="movies">
+          <figure class="movie__img--wrapper">
+            <img src="assets/The Terminator.jpg" alt="">
+          </figure>
+          <div class="movie__title">
+            <h3>The Terminator</h3>
+            <p>1984</p>            
+          </div>
+        </div>
+        <div class="movies">
+          <figure class="movie__img--wrapper">
+            <img src="assets/Terminator-2.jpg" alt="">
+          </figure>
+          <div class="movie__title">
+            <h3>Terminator 2</h3>
+            <p>1991</p>            
+          </div>
+        </div>
+        <div class="movies">
+          <figure class="movie__img--wrapper">
+            <img src="assets/Terminator-3.jpg" alt="">
+          </figure>
+          <div class="movie__title">
+            <h3>Terminator 3</h3>
+            <p>2003</p>            
+          </div>
+        </div>
+        <div class="movies">
+          <figure class="movie__img--wrapper">
+            <img src="assets/The Terminator-Sarah Connor Chronicles.jpg" alt="">
+          </figure>
+          <div class="movie__title">
+            <h3>Terminator: The Sarah Connor Chronicles</h3>
+            <p>2008</p>            
+          </div> 
+        </div>
+        <div class="movies">
+          <figure class="movie__img--wrapper">
+            <img src="assets/Terminator-Salvation.jpg" alt="">
+          </figure>
+          <div class="movie__title">
+            <h3>Terminator Salvation</h3>
+            <p>2009</p>
+          </div>
+        </div>
+        <div class="movies">
+          <figure class="movie__img--wrapper">
+            <img src="assets/Terminator-Genisys.jpg" alt="">
+          </figure>
+          <div class="movie__title">
+            <h3>Terminator Genisys</h3>
+            <p>2015</p>
+          </div>
+        </div>  
       </div>
-    </header>
+    </div>
   </section>
     
   <main>  

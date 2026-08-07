@@ -23,7 +23,8 @@ nav {
 
 
 p {
-  line-height: 1.5;
+  line-height: 1;
+  cursor: pointer;
 }
 
 a {
@@ -51,7 +52,7 @@ li {
 
 h1 {
   font-size: 56px;
-  color: blue;
+  color: #242424;
   margin-bottom: 24px;
   text-align: center;
   top: 0;
@@ -60,7 +61,13 @@ h1 {
 h2 {
   font-size: 32px;
   margin-bottom: 32px;
-  text-align: center;
+  text-align: top-center;
+}
+
+h3 {
+  font-size: 24px;
+  margin-bottom: 8px;
+  cursor: pointer;
 }
 
 button {
@@ -161,16 +168,11 @@ LANDING
   max-width: 1200px;
 }
 
-.nav__container.background-image {
-  background-image: url("assets/movie-theater.avif");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  justify-content: center;
-  margin: 0px;
-  padding: 0px;
-  width: 100%;
-  height: 100px;
+.background-image {
+  background-image: url("assets/movie-reel.jpg");
+  width: 200%;
+  height: 300px;
+  object-fit: cover;
 }
 
 
@@ -180,7 +182,7 @@ LANDING
   margin-right: 20px;
   text-decoration: none;
   font-size: 24px;
-  color: #242424;
+  color: blue;
   font-weight: 600;
   padding: 14px;
   width: 100%;
@@ -254,7 +256,7 @@ figure.header__img--wrapper {
 
 figure.header__img--wrapper img {
   width: 100%;
-  height: 300px;         
+  height: 320px;         
   object-fit: cover;        
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
