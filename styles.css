@@ -55,7 +55,7 @@ h1 {
 h2 {
   font-size: 32px;
   margin-bottom: 32px;
-  text-align: top-center;
+  text-align: center;
 }
 
 h3 {
@@ -315,9 +315,7 @@ figure.header__img--wrapper img:hover {
   align-items: center;
 }
 
-.no-cursor {
-  cursor: not-allowed;
-}
+
 
 input {
   background-color: #fff;
@@ -516,6 +514,7 @@ footer {
 
 .footer__link,
 .footer__copyright {
+  cursor: pointer;
   color: #fff;
 }
 
