@@ -60,6 +60,7 @@ h2 {
 
 h3 {
   font-size: 24px;
+  text-align: center;
   margin-bottom: 8px;
   cursor: pointer;
 }
@@ -211,7 +212,25 @@ a.btn-contact {
   padding: 12px 40px;
 }
 
+.input__wrapper {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.input__wrapper button {
+  background: none;
+  border: none;
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
+.input__wrapper button i {
+  font-size: 24px;
+  color: #7342d6;
+}
 
 
 .nav-img {
@@ -228,7 +247,7 @@ a.btn-contact {
 .header__container {
   width: 100%;
   font-size: 24px;
-  color: red;
+  color: rgb(0, 0, 139);
   font-weight: bold;
   max-width: 720px;
   margin: 0 auto;
@@ -246,7 +265,7 @@ a.btn-contact {
 }
 
 header .p {
-  color: red;
+  color:rgb(0, 0, 139);
   line-height: 1;
   font-weight: bold;
   font-size: 20px;
