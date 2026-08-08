@@ -41,8 +41,24 @@ function filterMovies(event) {
   renderMovies(event.target.value);
 }
 
+async function searchMovies() {
+  const searchTerm = document.querySelector(".input__search").value.trim();
 
-// FAKE DATA
+  if (!searchTerm) return;
+
+  const response = await fetch(
+    `https://www.omdbapi.com/?apikey=YOUR_API_KEY&s=${encodeURIComponent(searchTerm)}`
+  );
+  const data = await response.json();
+
+  movies = data.Search || [];
+  renderMovies();
+}
+
+document
+  .querySelector(".btn__search")
+  .addEventListener("click", searchMovies);
+
 
 function getMovies() {
   return new Promise((resolve) => {
@@ -50,47 +66,47 @@ function getMovies() {
       resolve([
         {
           id: 1,
-          title: "The Terminator",
-        
+          Title: "The Terminator",
+          Poster: "/assets/The Terminator.jpg",
           Year: "1984",
           Type: "movie",
         },
         {
           id: 2,
-          title: "Terminator 2: Judgment Day",
-          url: "assets/Terminator 2.jpg",
+          Title: "Terminator 2: Judgment Day",
+          Poster: "assets/Terminator-2.jpg",
           Year: "1991",
           Type: "movie",
         },
         {
           id: 3,
-          title: "Terminator 3: Rise of the Machines",
-          url: "assets/Terminator 3.jpg",
+          Title: "Terminator 3: Rise of the Machines",
+          Poster: "assets/Terminator-3.jpg",
           Year: "2003",
           Type: "movie",
         },
         {
           id: 4,
-          title: "The Terminator-Sarah Connor Chronicles",
-          url: "assets/The Terminator-Sarah Connor Chronicles.jpg",
+          Title: "The Terminator-Sarah Connor Chronicles",
+          Poster: "assets/The Terminator-Sarah Connor Chronicles.jpg",
           Year: "2008",
           Type: "movie",
         },
         {
           id: 5,
-          title: "Terminator Salvation",
-          url: "assets/Terminator Salvation.jpg",
+          Title: "Terminator Salvation",
+          Poster: "assets/Terminator-Salvation.jpg",
           Year: "2009",
           Type: "movie",
         },
         {
           id: 6,
-          title: "Terminator Genisys",
-          url: "assets/Terminator Genisys.jpg",
+          Title: "Terminator Genisys",
+          Poster: "assets/Terminator-Genisys.jpg",
           Year: "2015",
           Type: "movie",
         },
       ]);
   });
 
-})
+})}
