@@ -9,19 +9,19 @@ async function renderMovies(filter) {
     movies = await getMovies();
   }
 
-  moviesWrapper.classList.remove("movies__loading");
+  moviesWrapper.classList.remove("movie__loading");
 
   if (filter === "SORT") {
-    const filteredMovies = movies;
+    const filteredMovies = movie;
   }
   if (filter === "LOW_TO_HIGH") {
-    const filteredMovies = movies.sort(
+    const filteredMovies = movie.sort(
       (a, b) =>
         (a.year  - b.year),
     );
   } 
   else if (filter === "HIGH_TO_LOW") {
-    const filteredMovies = movies.sort(
+    const filteredMovies = movie.sort(
       (a, b) =>
         (b.year - a.year),
     );

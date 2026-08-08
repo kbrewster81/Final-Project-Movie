@@ -157,6 +157,9 @@ LANDING
 
 */
 
+
+
+
 .nav__container {
   width: 100%;
   max-width: 1200px;
@@ -207,6 +210,9 @@ a.btn-contact {
   transition: all 0.3s ease;
   padding: 12px 40px;
 }
+
+
+
 
 .nav-img {
   width: 150px;
@@ -407,13 +413,17 @@ FEATURES
   flex-wrap: wrap;
 }
 
+.movie:hover {
+  transform: scale(1.05);
+}
+
 .movie {
   width: 25%;
   padding: 24px;
   /* Added after tutorial to push all the books images down */
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 .movie__img {
@@ -447,7 +457,7 @@ FEATURES
   cursor: not-allowed;
 }
 
-#features .p {
+p {
   text-align: center;
   max-width: 400px;
   margin: 0 auto;
