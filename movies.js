@@ -3,50 +3,37 @@ let movies;
 async function renderMovies(filter) {
   const moviesWrapper = document.querySelector(".movies");
 
-  moviesWrapper.classList += " movies__loading";
-
   if (!movies) {
     movies = await getMovies();
   }
 
-  moviesWrapper.classList.remove("movie__loading");
+  let filteredMovies = [...movies];
 
-  if (filter === "SORT") {
-    const filteredMovies = movie;
-  }
   if (filter === "LOW_TO_HIGH") {
-    const filteredMovies = movie.sort(
-      (a, b) =>
-        (a.year  - b.year),
-    );
-  } 
-  else if (filter === "HIGH_TO_LOW") {
-    const filteredMovies = movie.sort(
-      (a, b) =>
-        (b.year - a.year),
-    );
+    filteredMovies.sort((a, b) => Number(a.Year) - Number(b.Year));
+  } else if (filter === "HIGH_TO_LOW") {
+    filteredMovies.sort((a, b) => Number(b.Year) - Number(a.Year));
+  }
 
-  const moviesHtml = movies
+  const moviesHtml = filteredMovies
     .map((movie) => {
-      return `<div class="movie">
-       <figure class="movie__img--wrapper">
-         <img class="movie__img" src="${movie.url}" alt="">
-       </figure>
-       <div class="movie__title">
-        ${movie.title}
-       </div>
-       <div class="movie__ratings">
-        ${ratingsHTML(movie.rating)}
-       </div>
-       <div class="movie__price">
-          ${priceHTML(movie.originalPrice, movie.salePrice)}
-      </div>
-     </div>`;
+      return `
+        <div class="movie">
+          <figure class="movie__img--wrapper">
+            <img class="movie__img" src="${movie.url}" alt="${movie.title}">
+          </figure>
+          <div class="movie__title">
+            <h3>${movie.title}</h3>
+            <p>${movie.Year}</p>
+          </div>
+        </div>
+      `;
     })
     .join("");
 
   moviesWrapper.innerHTML = moviesHtml;
 }
+
 
 
 
