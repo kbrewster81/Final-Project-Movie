@@ -67,7 +67,7 @@ function getMovies() {
         {
           id: 1,
           Title: "The Terminator",
-          Poster: "/assets/The Terminator.jpg",
+          Poster: "assets/The Terminator.jpg",
           Year: "1984",
           Type: "movie",
         },
