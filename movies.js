@@ -20,10 +20,10 @@ async function renderMovies(filter) {
       return `
         <div class="movie">
           <figure class="movie__img--wrapper">
-            <img class="movie__img" src="${movie.url}" alt="${movie.title}">
+            <img class="movie__img" src="${movie.Poster}" alt="${movie.Title}">
           </figure>
-          <div class="movie__title">
-            <h3>${movie.title}</h3>
+          <div class="movie__Title">
+            <h3>${movie.Title}</h3>
             <p>${movie.Year}</p>
           </div>
         </div>
@@ -47,7 +47,7 @@ async function searchMovies() {
   if (!searchTerm) return;
 
   const response = await fetch(
-    `https://www.omdbapi.com/?apikey=YOUR_API_KEY&s=${encodeURIComponent(searchTerm)}`
+    `https://www.omdbapi.com/?apikey= cc724532&s=${encodeURIComponent(searchTerm)}`
   );
   const data = await response.json();
 
