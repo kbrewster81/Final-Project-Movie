@@ -242,7 +242,11 @@ a.btn-contact {
   background-color: rgba(115, 66, 214, 0.1)
 }
 
+/*
 
+ HEADER
+
+ */
 
 .header__container {
   width: 100%;
@@ -259,6 +263,23 @@ a.btn-contact {
 
 button {
   font-size: 20px;
+  padding: 10px;
+  background-color: #007BFF;
+  color: #242424;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#searchForm {
+    display: flex;
+    align-items: center;
+}
+ 
+#searchInput {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 
