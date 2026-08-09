@@ -666,7 +666,17 @@ select {
 }
 
 /* SMALL PHONES, TABLETS, LARGE SMARTPHONES */
+
+.movie {
+  width: 25%;
+}
+
 @media (max-width: 768px) {
+
+  .movie {
+    width: 50%;
+  }
+
   .header__description {
     padding: 0 24px;
   }
@@ -687,6 +697,17 @@ select {
 
 /* SMALL PHONES, LARGE SMARTPHONES */
 @media (max-width: 550px) {
+
+    .movie {
+    width: 100%;
+  }
+
+    input {
+    font-size: 20px;
+    height: 56px;
+  }
+
+
   .btn__menu {
     display: block;
   }
