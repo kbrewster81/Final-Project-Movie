@@ -47,7 +47,7 @@ async function searchMovies() {
   if (!searchTerm) return;
 
   const response = await fetch(
-    `https://www.omdbapi.com/?apikey= cc724532&s=${encodeURIComponent(searchTerm)}`
+    `https://www.omdbapi.com/?apikey=cc724532&s=${encodeURIComponent(searchTerm)}`
   );
   const data = await response.json();
 
@@ -55,9 +55,13 @@ async function searchMovies() {
   renderMovies();
 }
 
-document
-  .querySelector(".btn__search")
-  .addEventListener("click", searchMovies);
+ const searchButton = document.querySelector(".btn__search");
+
+ if (searchButton) {
+   searchButton.addEventListener("click", searchMovies);
+  }
+
+ renderMovies();
 
 
 function getMovies() {
